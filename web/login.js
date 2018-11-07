@@ -58,13 +58,13 @@ username.setAttribute('required', '');
 usersname.id = 'usersname';
 usersname.type = 'text';
 usersname.autocomplete = 'on';
-usersname.placeholder = 'Введите Ваше имя';
+usersname.placeholder = 'Введите Вашу фамилию';
 usersname.setAttribute('required', '');
 
 userpassport.id = 'userpassport';
 userpassport.type = 'text';
 userpassport.autocomplete = 'on';
-userpassport.placeholder = 'Введите Вашу фамилию';
+userpassport.placeholder = 'Введите номер пасспорта';
 userpassport.setAttribute('required', '');
 
 userphone.id = 'userphone';
