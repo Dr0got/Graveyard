@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Graveyard:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Graveyard_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Graveyard/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Graveyard" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
