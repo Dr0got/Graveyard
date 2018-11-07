@@ -4,10 +4,16 @@ let form = document.createElement('form'); // Внутр. блок формы в
 let form2 = document.createElement('form'); // Внутр. блок регистрации
 let login = document.createElement('input'); // Login
 let pass = document.createElement('input'); // Password
-let subm = document.createElement('input'); // Кнопка подтвердить
+let username = document.createElement('input'); // Username Имя
+let usersname = document.createElement('input'); // UserSname Фамилия
+let userpassport = document.createElement('input'); // Userpassport паспорт
+let userphone = document.createElement('input'); // UserPhone
+let usermail = document.createElement('input'); // E-mail
 let check = document.createElement('div'); // Блок "Админ?"
 let checkbox = document.createElement('input'); // Чекбокс "Админ?"
 let label = document.createElement('label'); // Надпись "Я - администратор"
+
+let subm = document.createElement('input'); // Кнопка подтвердить
 let btn = document.createElement('button'); // Кнопка отмены
 
 
@@ -42,6 +48,36 @@ checkbox.type = 'checkbox';
 checkbox.id = 'isAdmin';
 checkbox.value = 'Админ';
 label.htmlFor = 'isAdmin';
+
+username.id = 'username';
+username.type = 'text';
+username.autocomplete = 'on';
+username.placeholder = 'Введите Ваше имя';
+username.setAttribute('required', '');
+
+usersname.id = 'usersname';
+usersname.type = 'text';
+usersname.autocomplete = 'on';
+usersname.placeholder = 'Введите Ваше имя';
+usersname.setAttribute('required', '');
+
+userpassport.id = 'userpassport';
+userpassport.type = 'text';
+userpassport.autocomplete = 'on';
+userpassport.placeholder = 'Введите Вашу фамилию';
+userpassport.setAttribute('required', '');
+
+userphone.id = 'userphone';
+userphone.type = 'text';
+userphone.autocomplete = 'on';
+userphone.placeholder = 'Введите номер Вашего телефона';
+userphone.setAttribute('required', '');
+
+usermail.id = 'useremail';
+usermail.type = 'email';
+usermail.autocomplete = 'on';
+usermail.placeholder = 'Введите Ваш e-mail';
+usermail.setAttribute('required', '');
 
 subm.type = 'submit';
 subm.value = 'Войти';
@@ -90,6 +126,11 @@ function displayRegistration() {
 
   form2.appendChild(login);
   form2.appendChild(pass);
+  form2.appendChild(username);
+  form2.appendChild(usersname);
+  form2.appendChild(userpassport);
+  form2.appendChild(userphone);
+  form2.appendChild(usermail);
   form2.appendChild(subm);
   form2.appendChild(btn);
   div2.appendChild(form2);
