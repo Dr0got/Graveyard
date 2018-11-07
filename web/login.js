@@ -27,8 +27,8 @@ let btn = document.createElement('button'); // Кнопка отмены
 div.id = 'out';
 div2.id = 'out2';
 
-div.style.display="inline-flex"
-div2.style.display="inline-flex"
+div.style.display="inline-flex";
+div2.style.display="inline-flex";
 
 form.id = 'enter-form';
 form2.id = 'reg-form';
@@ -115,7 +115,7 @@ function displayEnter() {
   form.appendChild(btn);
   div.appendChild(form);
   fst.appendChild(div);
-  div.style.display="inline-flex"
+  div.style.display="inline-flex";
 
   document.getElementById('close-btn').onclick=closeForm;
   // document.getElementById('enter').onclick=closeForm;
@@ -135,9 +135,10 @@ function displayRegistration() {
   form2.appendChild(btn);
   div2.appendChild(form2);
   fst.appendChild(div2);
-  div2.style.display="inline-flex"
+  div2.style.display="inline-flex";
 
   document.getElementById('close-btn').onclick=closeForm2;
+  subm.onclick = function(){setUser();};
   // document.getElementById('registration').onclick=closeForm2;
 
 }
