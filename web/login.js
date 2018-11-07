@@ -34,13 +34,13 @@ form.id = 'enter-form';
 form2.id = 'reg-form';
 
 login.id = 'userLogin';
-login.placeholder = 'Введите логин';
+login.placeholder = 'Логин';
 login.setAttribute('required', '');
 
 pass.id = 'userPassword';
 pass.type = 'password';
 pass.maxlength ='50';
-pass.placeholder = 'Введите пароль';
+pass.placeholder = 'Пароль';
 pass.setAttribute('required', '');
 
 check.id = 'isAdmin-block';
@@ -52,31 +52,31 @@ label.htmlFor = 'isAdmin';
 username.id = 'username';
 username.type = 'text';
 username.autocomplete = 'on';
-username.placeholder = 'Введите Ваше имя';
+username.placeholder = 'Имя';
 username.setAttribute('required', '');
 
 usersname.id = 'usersname';
 usersname.type = 'text';
 usersname.autocomplete = 'on';
-usersname.placeholder = 'Введите Вашу фамилию';
+usersname.placeholder = 'Фамилия';
 usersname.setAttribute('required', '');
 
 userpassport.id = 'userpassport';
 userpassport.type = 'text';
 userpassport.autocomplete = 'on';
-userpassport.placeholder = 'Введите номер пасспорта';
+userpassport.placeholder = 'Номер паспорта';
 userpassport.setAttribute('required', '');
 
 userphone.id = 'userphone';
 userphone.type = 'text';
 userphone.autocomplete = 'on';
-userphone.placeholder = 'Введите номер Вашего телефона';
+userphone.placeholder = 'Номер телефона';
 userphone.setAttribute('required', '');
 
 usermail.id = 'useremail';
 usermail.type = 'email';
 usermail.autocomplete = 'on';
-usermail.placeholder = 'Введите Ваш e-mail';
+usermail.placeholder = 'e-mail';
 usermail.setAttribute('required', '');
 
 subm.type = 'submit';
@@ -105,7 +105,6 @@ function closeForm2() {
 }
 function displayEnter() {
   div2.style.display="none";
-
   form.appendChild(login);
   form.appendChild(pass);
   form.appendChild(check);
