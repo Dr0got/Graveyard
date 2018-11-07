@@ -10,7 +10,7 @@ function setUser(){
     req.responseType = 'text';
 
     req.onload = function() {
-        var str = req.response; // get the string from the response
+        let str = req.response; // get the string from the response
         alert(str);
     };
 
