@@ -27,21 +27,21 @@ public class RegistrationServlet extends HttpServlet {
         String fullName = request.getHeader("full_name");
         String passport = request.getHeader("passport_number");
         String email = request.getHeader("email");
-        String phone = request.getHeader("phone");
+        String userphone = request.getHeader("phone");
 
-        try(Connection connection = DriverManager.getConnection(connectionURL, userName, this.password)) {
+        try {
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            Connection connection = DriverManager.getConnection(connectionURL, userName, this.password);
             //Statement statement = connection.createStatement();
-            PreparedStatement prSt = connection.prepareStatement("insert into klients values (?, ?, ?, ?, ?, ?)");
+            PreparedStatement prSt = connection.prepareStatement("insert into klients (login, password, full_name, passport_number, email, phone)values (?, ?, ?, ?, ?, ?)");
             prSt.setString(1, login);
             prSt.setString(2, pass);
             prSt.setString(3, fullName);
             prSt.setString(4, passport);
             prSt.setString(5, email);
-            prSt.setString(6, phone);
+            prSt.setString(6, userphone);
             prSt.execute();
             response.getWriter().write("OK");
-            //String insertQuery = "insert into klients values (" + login + ", " + password + ", " + full_name + ", " + passport + ", " + email + ", " + phone+");";
-            //statement.executeUpdate(insertQuery);
         }catch(SQLException e){
             System.out.println("Error in SQL");
             e.printStackTrace();
