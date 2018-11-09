@@ -9,9 +9,10 @@ function setUser(){
     req.setRequestHeader('email', document.getElementById("useremail").value);
     req.responseType = 'text';
 
+    //When there is a response from the server
     req.onload = function() {
         let str = req.response; // get the string from the response
-        alert(str);
+        (str == "Exception") ? alert("Error in registration") : setCookie("user", str);
     };
 
     req.send(null);

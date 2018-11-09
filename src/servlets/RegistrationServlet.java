@@ -32,7 +32,6 @@ public class RegistrationServlet extends HttpServlet {
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             Connection connection = DriverManager.getConnection(connectionURL, userName, this.password);
-            //Statement statement = connection.createStatement();
             PreparedStatement prSt = connection.prepareStatement("insert into klients (login, password, full_name, passport_number, email, phone)values (?, ?, ?, ?, ?, ?)");
             prSt.setString(1, login);
             prSt.setString(2, pass);
@@ -41,11 +40,11 @@ public class RegistrationServlet extends HttpServlet {
             prSt.setString(5, email);
             prSt.setString(6, userphone);
             prSt.execute();
-            response.getWriter().write("OK");
+            response.getWriter().write(login);
         }catch(SQLException e){
             System.out.println("Error in SQL");
             e.printStackTrace();
-            response.getWriter().write("Bad");
+            response.getWriter().write("Exception");
         }
     }
 }
