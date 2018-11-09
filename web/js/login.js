@@ -13,7 +13,7 @@ let check = document.createElement('div'); // Блок "Админ?"
 let checkbox = document.createElement('input'); // Чекбокс "Админ?"
 let label = document.createElement('label'); // Надпись "Я - администратор"
 
-let subm = document.createElement('input'); // Кнопка подтвердить
+let subm = document.createElement('submit'); // Кнопка подтвердить
 let btn = document.createElement('button'); // Кнопка отмены
 
 
@@ -46,7 +46,6 @@ pass.setAttribute('required', '');
 check.id = 'isAdmin-block';
 checkbox.type = 'checkbox';
 checkbox.id = 'isAdmin';
-checkbox.value = 'Админ';
 label.htmlFor = 'isAdmin';
 
 username.id = 'username';
@@ -79,9 +78,6 @@ usermail.autocomplete = 'on';
 usermail.placeholder = 'e-mail';
 usermail.setAttribute('required', '');
 
-subm.type = 'submit';
-subm.value = 'Войти';
-subm.onclick = 'setUser()';
 subm.id = 'enter-btn';
 
 btn.id = 'close-btn';
@@ -92,7 +88,7 @@ label.appendChild(document.createTextNode('Я - администратор'));
 document.getElementById('enter').onclick=displayEnter;
 document.getElementById('registration').onclick=displayRegistration;
 
-var fst = document.getElementById('enter-block');
+let fst = document.getElementById('enter-block');
 
 function closeForm() {
   document.getElementById('enter-block').removeChild(div);
@@ -103,7 +99,15 @@ function closeForm2() {
   document.getElementById('enter-block').removeChild(div2);
   document.getElementById('registration').onclick=displayRegistration;
 }
+
+function doEnter(){
+    if(document.getElementById("isAdmin"))
+        setOldUser();
+    else setNewUser();
+}
+
 function displayEnter() {
+
   div2.style.display="none";
   form.appendChild(login);
   form.appendChild(pass);
@@ -116,8 +120,9 @@ function displayEnter() {
   fst.appendChild(div);
   div.style.display="inline-flex";
 
+  document.getElementById('enter-btn').onclick=doEnter;
+  document.getElementById('enter-btn').innerText='Войти';
   document.getElementById('close-btn').onclick=closeForm;
-  // document.getElementById('enter').onclick=closeForm;
 }
 
 function displayRegistration() {
@@ -136,8 +141,10 @@ function displayRegistration() {
   fst.appendChild(div2);
   div2.style.display="inline-flex";
 
-  document.getElementById('close-btn').onclick=closeForm2;
-  subm.onclick = function(){setUser();};
-  // document.getElementById('registration').onclick=closeForm2;
 
+  document.getElementById('enter-btn').onclick=doEnter;
+  document.getElementById('enter-btn').innerText='Войти';
+  document.getElementById('close-btn').onclick=closeForm2;
+  // document.getElementById('registration').onclick=closeForm2;
 }
+
