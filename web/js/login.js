@@ -36,10 +36,11 @@ form2.id = 'reg-form';
 login.id = 'userLogin';
 login.placeholder = 'Логин';
 login.setAttribute('required', '');
+login.setAttribute('maxlength', '15');
 
 pass.id = 'userPassword';
 pass.type = 'password';
-pass.maxlength ='50';
+pass.setAttribute('maxlength', '20');
 pass.placeholder = 'Пароль';
 pass.setAttribute('required', '');
 
@@ -49,30 +50,35 @@ checkbox.id = 'isAdmin';
 label.htmlFor = 'isAdmin';
 
 username.id = 'username';
+username.setAttribute('maxlength', '20');
 username.type = 'text';
 username.autocomplete = 'on';
 username.placeholder = 'Имя';
 username.setAttribute('required', '');
 
 usersname.id = 'usersname';
+usersname.setAttribute('maxlength', '20');
 usersname.type = 'text';
 usersname.autocomplete = 'on';
 usersname.placeholder = 'Фамилия';
 usersname.setAttribute('required', '');
 
 userpassport.id = 'userpassport';
+userpassport.setAttribute('maxlength', '10');
 userpassport.type = 'text';
 userpassport.autocomplete = 'on';
 userpassport.placeholder = 'Номер паспорта';
 userpassport.setAttribute('required', '');
 
 userphone.id = 'userphone';
+userphone.setAttribute('maxlength', '20');
 userphone.type = 'text';
 userphone.autocomplete = 'on';
 userphone.placeholder = 'Номер телефона';
 userphone.setAttribute('required', '');
 
 usermail.id = 'useremail';
+usermail.setAttribute('maxlength', '30');
 usermail.type = 'email';
 usermail.autocomplete = 'on';
 usermail.placeholder = 'e-mail';
