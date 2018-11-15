@@ -1,4 +1,5 @@
 * {
+  text-decoration: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,4 +9,11 @@ body {
 }
 *:hover {
   cursor: default;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }
