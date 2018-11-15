@@ -5,60 +5,67 @@ body {
     /* background: rgba(104, 163, 189, 1); */
 }
 .banner {
-  box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.63);
-  height: 94vh;
+  height: 100vh;
   background-size: 110%;
   background-position: right;
   background-repeat: no-repeat;
+  background-color: rgba(0, 56, 82, 0.8);
   background-image: url(../images/banner.jpg);
+  background-blend-mode: lighten;
+  background-attachment: fixed;
 }
 .banner-right {
   padding-top: 15%;
   width: 50%;
   height: 100%;
-  background: rgba(128, 185, 210, 0.5);
   float: right;
   color: white;
   text-align: center;
   flex-direction: column;
-  /* align-items: flex-start; */
   display: flex;
-  /* justify-content: center; */
 }
 .banner-right h2 {
   color: rgb(25, 21, 42);
-  font-size: 72pt;
+  font-size: 46pt;
   text-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
 }
 .banner-right h3 {
 
-  font-size: 36pt;
+  font-size: 16pt;
+  line-height: 0px;
+  color: #003851;
   text-shadow: 0px 3px 25px rgba(0, 0, 0, 0.5);
 }
 .first-block {
   padding-top: 40px;
   padding-bottom: 60px;
   width: 100%;
-  background: rgba(104, 163, 189, 0.3);
+  background: rgba(0, 56, 82, 0.3);
+  background-image: url(../images/banner.jpg);
+  background-blend-mode: darken;
+  background-attachment: fixed;
+  background-size: 110%;
+  background-position: right;
+  background-repeat: no-repeat;
   text-align: center;
 }
 .first-block h3 {
   margin-bottom: 20px;
+  color: white;
 }
 .services {
   width: 50%;
   margin: auto;
   height: 60vh;
-  /* background: white; */
-  box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.53);
+  box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.5);
 }
 .service-tab {
+  font-size: 10pt;
   width: 33.34%;
   margin-left: -2px;
   margin-right: -2px;
   height: 10%;
   background: rgba(255, 255, 255, 0.85);
-  /* display: inline-block; */
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
@@ -66,18 +73,29 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 .cheked-tab {
-  background: rgba(8, 161, 207, 1);
-  color: white;
+  background: #3b89ac;
 }
+
+.colours {
+  background: #002535;
+  background: #003851;
+  background: #22646e;
+  background: #bfd2d9;
+  background: #3b89ac;
+}
+
 .service-tab:hover {
-  background:rgba(8, 161, 207, 0.4);
+  background: rgba(113, 179, 208, 1);
+}
+.cheked-tab:hover {
+  background: #3b89ac;
 }
 #service-container {
   text-align: left;
   padding: 30px;
   width: 100%;
   height: 90%;
-  background: rgba(8, 161, 207, 1);
+  background: #3b89ac
 }
 #service-container p{
   margin-top: 10px;
@@ -94,5 +112,64 @@ body {
   float: right;
 }
 .second-block {
-  height: 60vh;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: rgba(0, 56, 82, 1);
+  background-image: url(../images/banner.jpg);
+  background-blend-mode: difference;
+  background-attachment: fixed;
+  background-size: 110%;
+  background-position: right;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.second-block h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+.about-banner {
+  color: white;
+  width: 100%;
+  height: 300px;
+  /* background: grey; */
+}
+.about-text {
+  text-align: right;
+  width: 53%;
+  float: right;
+  padding-right: 10%;
+  line-height: 25px;
+}
+.third-block {
+  color: white;
+  width: 100%;
+  height: 200px;
+  /* padding-top: 40px; */
+  /* padding-bottom: 60px; */
+  width: 100%;
+  background-color: rgba(0, 56, 82, 1);
+  background-size: cover;
+  background-position: left;
+  background-blend-mode: color-burn;
+
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.third-block h3 {
+  padding-top: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+.third-block .map {
+  width: 100%;
+  position: absolute;
+  background-size: contain;
+  height: inherit;
+  opacity: 0.07;
+    background-image: url(../images/map.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
