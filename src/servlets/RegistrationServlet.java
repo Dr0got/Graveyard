@@ -32,7 +32,7 @@ public class RegistrationServlet extends HttpServlet {
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             Connection connection = DriverManager.getConnection(connectionURL, userName, this.password);
-            PreparedStatement prSt = connection.prepareStatement("insert into klients (login, password, full_name, passport_number, email, phone)values (?, ?, ?, ?, ?, ?)");
+            PreparedStatement prSt = connection.prepareStatement("insert into graveyard.clients (login, password, full_name, passport_number, email, phone)values (?, ?, ?, ?, ?, ?)");
             prSt.setString(1, login);
             prSt.setString(2, pass);
             prSt.setString(3, fullName);
