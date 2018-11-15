@@ -4,6 +4,11 @@
   text-align: right;
   background: rgb(36, 41, 42);
 }
+.fixed {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
+}
 .enter-button {
     color: rgb(198, 198, 198);
     border: 0;
@@ -23,6 +28,7 @@
   float: right;
   margin-right: 10%;
   z-index: 1000;
+  position: fixed;
 }
 #out {
   margin-top: 10px;
@@ -96,7 +102,7 @@ text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.79);
 }
 #second-header {
 display: flex;
-background: rgb(137, 143, 153);
+background: #002535;
 padding-left: 10%;
 }
 ul {
@@ -107,8 +113,9 @@ ul {
   margin-right: 10px;
   padding: 5px 10px;
   transition: 0.3s;
-  font-size: 13pt;
-  letter-spacing: 1px;
+  font-size: 11pt;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.81);
 }
 #second-header li:hover {
   background: rgb(36, 41, 42);
