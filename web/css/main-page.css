@@ -94,5 +94,68 @@ body {
   float: right;
 }
 .second-block {
+<<<<<<< HEAD
   height: 60vh;
+=======
+  padding-top: 40px;
+  padding-bottom: 60px;
+  width: 100%;
+  background-color: rgba(0, 56, 82, 1);
+  background-image: url(../images/banner.jpg);
+  background-blend-mode: difference;
+  background-attachment: fixed;
+  background-size: 110%;
+  background-position: right;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.second-block h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+.about-banner {
+  color: white;
+  width: 100%;
+  height: 300px;
+  /* background: grey; */
+}
+.about-text {
+  text-align: right;
+  width: 53%;
+  float: right;
+  padding-right: 10%;
+  line-height: 25px;
+}
+.third-block {
+  color: white;
+  width: 100%;
+  height: 200px;
+  /* padding-top: 40px; */
+  /* padding-bottom: 60px; */
+  width: 100%;
+  background-color: rgba(0, 56, 82, 1);
+  background-size: cover;
+  background-position: left;
+  background-blend-mode: color-burn;
+
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.third-block h3 {
+  padding-top: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+.third-block .map {
+  width: 100%;
+  position: absolute;
+  background-size: contain;
+  height: inherit;
+  opacity: 0.07;
+    background-image: url(../images/map.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+>>>>>>> parent of 734a2dc... Update web/css/main-page.css
 }
