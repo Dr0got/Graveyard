@@ -113,6 +113,7 @@ body {
 }
 .second-block {
   padding-top: 40px;
+  height: 69vh;
   padding-bottom: 60px;
   width: 100%;
   background-color: rgba(0, 56, 82, 1);
