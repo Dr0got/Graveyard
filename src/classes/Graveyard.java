@@ -19,14 +19,7 @@ public class Graveyard {
 
     public synchronized String getGraveJSON() {
         try {
-            System.out.println("Start parsing JSON");
-            //ObjectMapper mapper = new ObjectMapper();
             Gson gs = new Gson();
-            System.out.println("Create mapper");
-            /*String str = "";
-            PrintWriter pw = new PrintWriter(str);
-            mapper.writeValue(pw, this);
-            pw.write(str);*/
             String str = gs.toJson(this);
             return str;
         } catch (Exception e) {

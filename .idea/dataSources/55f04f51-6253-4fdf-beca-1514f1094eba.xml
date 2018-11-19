@@ -1593,8 +1593,6 @@ choice_datetime</ColNames>
       <RefSchemaName>graveyard</RefSchemaName>
       <RefTableName>graveyards</RefTableName>
       <RefColNames>id_graveyard</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="377" parent="290" name="graves_monuments_id_monument_fk">
       <ColNames>id_monument</ColNames>
@@ -1622,7 +1620,6 @@ choice_datetime</ColNames>
     <column id="380" parent="291" name="graveyard_number">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="381" parent="291" name="area_in_hec">

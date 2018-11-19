@@ -4,11 +4,11 @@
     <head>
         <meta charset="utf-8" />
         <title>Map</title>
-        <link rel="stylesheet" src="map.css">
+        <link rel="stylesheet" href="css/map.css">
         <script src="js/Map.js"></script>
     </head>
     <body>
-        <div class = "map">
+        <div id = "map">
 
         </div>
         <script>
