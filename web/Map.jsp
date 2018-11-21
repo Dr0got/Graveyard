@@ -11,7 +11,6 @@
         <script src="js/Map.js"></script>
         <script src="js/Cookie.js"></script>
         <script src="js/RequestScript.js"></script>
-        <script src="js/login.js" charset="utf-8"></script>
     </head>
     <body>
       <div class="fixed">
@@ -39,6 +38,8 @@
                 <area shape="poly" coords="440, 500, 500, 450, 520, 480, 4700, 530" onclick="getMap(3)">
             </map>
         </div>
+
+        <script src="js/login.js" charset="utf-8"></script>
         <script>
             //getMap(1);
         </script>
