@@ -14,6 +14,8 @@ public class Grave {
     public int grave_length;
     @JsonProperty("grave_width")
     public int grave_width;
+    @JsonProperty("client")
+    public String client;
     @JsonProperty("dec_fullname")
     public String dec_fullname;
     @JsonProperty("dec_birthday")
