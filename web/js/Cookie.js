@@ -12,4 +12,5 @@ function getCookie(key){
         if(key == pairKey)
             return pair.split("=")[1];
     }
+    return null;
 }

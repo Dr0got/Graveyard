@@ -19,7 +19,7 @@ public class AuthorizationServlet extends HttpServlet {
             "&amp"+
             "&serverTimezone=UTC";
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String login = request.getHeader("login");
         String pass = request.getHeader("password");
         String mode = request.getHeader("mode");
@@ -31,7 +31,7 @@ public class AuthorizationServlet extends HttpServlet {
             ResultSet res = prSt.executeQuery();
             if(res.next()){
                 if(res.getString(1).equals(pass))
-                    response.getWriter().write(login);
+                    response.getWriter().write(login + " " + password);
                 else response.getWriter().write("PasswordException");
                 return;
             }else
