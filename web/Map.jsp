@@ -5,11 +5,32 @@
         <meta charset="utf-8" />
         <title>Map</title>
         <link rel="stylesheet" href="css/map.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/main-page.css">
         <script src="js/Map.js"></script>
         <script src="js/Cookie.js"></script>
         <script src="js/RequestScript.js"></script>
+        <script src="js/login.js" charset="utf-8"></script>
     </head>
     <body>
+      <div class="fixed">
+
+
+      <header id="first-header">
+        <button id="enter" class="enter-button">Вход</button>
+        <button id="registration" class="enter-button">Регистрация</button>
+      </header>
+      <header id="second-header">
+        <ul>
+          <li>Главная</li>
+          <a href="pages/goods.html"><li>Товары и услуги</li></a>
+          <a href="Map.jsp"><li>Карта</li></a>
+          <li>Контакты</li>
+        </ul>
+      </header>
+      </div>
+      <section id="enter-block"></section>
         <div id = "map">
             <img src = "images/map.png" usemap="#Navigation" style="height: 1094px; width: 887px;" id="mapImage">
             <map id="Navigation"  name="Navigation">
