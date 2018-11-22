@@ -26,7 +26,7 @@ public class AuthorizationServlet extends HttpServlet {
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             Connection connection = DriverManager.getConnection(connectionURL, userName, this.password);
-            PreparedStatement prSt = connection.prepareStatement((mode.equals("admin"))?"SELECT password FROM graveyard.administrators WHERE login = ?" : "SELECT password FROM graveyard.clients WHERE login = ?");
+            PreparedStatement prSt = connection.prepareStatement((mode.equals("admin"))?"SELECT password FROM graveyard.administrators WHERE id_admin = ?" : "SELECT password FROM graveyard.clients WHERE login = ?");
             prSt.setString(1, login);
             ResultSet res = prSt.executeQuery();
             if(res.next()){

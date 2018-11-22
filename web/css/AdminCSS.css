@@ -1,0 +1,9 @@
+#MainField{
+    position:absolute;
+    left: 10%;
+    width: 50%;
+    top: 20%;
+    height: 70%;
+    overflow: auto;
+    border: 3px darkred solid;
+}
