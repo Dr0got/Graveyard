@@ -1,7 +1,11 @@
 .goods-main {
   padding-top: 50px;
-  display: inline-flex;
+  margin: 0;
+  padding-left: 10%;
+  /* display: inline-flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center; */
 }
 
 /* FORM */
@@ -10,7 +14,7 @@
 	display: none;
 }
 .plan h2 {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .form label{
@@ -21,7 +25,7 @@
 	font-size: 26px;
 	text-align: center;
 	line-height: 150px;
-  padding: 70px 90px;
+  padding: 70px 100px;
 	cursor: pointer;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -72,6 +76,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
 #f_plate_img{
   background-image: url(../images/f_plate.jpg);
   background-size: contain;
@@ -94,6 +100,26 @@
 #fr_plate_img {
   background-image: url(../images/fr_plate.jpg);
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#f_kat_img{
+  background-image: url(../images/f_kat.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#s_kat_img {
+  background-image: url(../images/s_kat.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#t_kat_img {
+  background-image: url(../images/t_kat.jpg);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

@@ -28,9 +28,9 @@
     </div>
     <section id="enter-block"></section>
 
-    <section class="goods-main">
+    <section class="goods-main" style="padding-bottom:200px;">
       <section >
-        <form class="form" style="margin-top:0px;">
+        <form class="form" style="margin-top:30px;">
 			<section class="plan">
 				<h2>Выберите вид гроба:</h2>
 				<input type="radio" name="radio1" id="f_grob" value="f_grob"><label id="f_grob_img" class="free-label four col" for="f_grob"></label>
@@ -38,25 +38,48 @@
 				<input type="radio" name="radio1" id="t_grob" value="t_grob"><label id="t_grob_img" class="premium-label four col" for="t_grob"></label>
 				<input type="radio" name="radio1" id="fr_grob" value="fr_grob"><label id="fr_grob_img" class="premium-label four col" for="fr_grob"></label>
         </section>
-      </form>
+      <!-- </form> -->
 
-      <form class="form" style="margin-top:100px;">
-        <section class="plan">
+      <!-- <form class="form" style="margin-top:80px;"> -->
+        <section class="plan"  style="margin-top:80px;">
           <h2>Выберите вид надгробия:</h2>
-<input type="radio" name="plate" id="f_plate" value="f_plate"><label id="f_plate_img" class="free-label four col" for="f_plate"></label>
-<input type="radio" name="plate" id="s_plate" value="s_plate"><label id="s_plate_img" class="free-label four col" for="s_plate"></label>
-<input type="radio" name="plate" id="t_plate" value="t_plate" checked><label id="t_plate_img" class="basic-label four col" for="t_plate"></label>
-<input type="radio" name="plate" id="fr_plate" value="fr_plate"><label id="fr_plate_img" class="premium-label four col" for="fr_plate"></label>
-        </section>
-      </form>
 
-      <form class="form" style="margin-top:100px;">
-        <section class="plan">
-          <h2>Выберите катафалк:</h2>
 <input type="radio" name="plate" id="f_plate" value="f_plate"><label id="f_plate_img" class="free-label four col" for="f_plate"></label>
 <input type="radio" name="plate" id="s_plate" value="s_plate"><label id="s_plate_img" class="free-label four col" for="s_plate"></label>
 <input type="radio" name="plate" id="t_plate" value="t_plate" checked><label id="t_plate_img" class="basic-label four col" for="t_plate"></label>
 <input type="radio" name="plate" id="fr_plate" value="fr_plate"><label id="fr_plate_img" class="premium-label four col" for="fr_plate"></label>
+
+        </section>
+        <h4 style="margin-top:30px;">Метариал</h4>
+        <select class="" name="">
+          <option value="">Черный мрамор</option>
+          <option value="">Бетон</option>
+          <option value="">Гранит</option>
+          <option value="">Металл</option>
+          <option value="">Белый мрамор</option>
+        </select>
+      <!-- </form> -->
+
+      <!-- <form class="form" style="margin-top:80px;"> -->
+        <section class="plan"  style="margin-top:80px;">
+          <h2>Выберите катафалк:</h2>
+
+<input type="radio" name="kat" id="f_kat" value="f_kat"><label id="f_kat_img" class="free-label four col" for="f_kat"></label>
+<input type="radio" name="kat" id="s_kat" value="s_kat"><label id="s_kat_img" class="free-label four col" for="s_kat"></label>
+<input type="radio" name="kat" id="t_kat" value="t_kat" checked><label id="t_kat_img" class="basic-label four col" for="t_kat"></label>
+        </section>
+      <!-- </form> -->
+
+      <!-- <form class="form" style="margin-top:100px;"> -->
+        <section class="plan" style="margin-top:70px;">
+          <h2>Дополнительные услуги:</h2>
+          <input style="display:inline;" type="checkbox" name="s" value="sa">Столик <br>
+
+          <input style="display:inline;" type="checkbox" name="s" value="sa">Люди для переноски
+        </section>
+        <section class="plan" style="margin-top:70px;">
+          <h3>Стоимость, грн:<h3 id="summ">12345</h3></h3>
+          <input style="display:block;margin-top:10px;" type="submit" name="" value="Подтвердить заказ">
         </section>
       </form>
       </section>
