@@ -65,18 +65,16 @@
 
 
 #f_kat_img{
-  background-image: url(../images/f_kat.jpg);
+  background-image: url(../images/kat2.jpg);
 }
 #s_kat_img {
-  background-image: url(../images/s_kat.jpg);
+  background-image: url(../images/kat1.jpg);
 }
 #t_kat_img {
-  background-image: url(../images/t_kat.jpg);
+  background-image: url(../images/kat3.jpg);
 }
 .hover_good {
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .hover_good:hover {
   background-size: 200%;
