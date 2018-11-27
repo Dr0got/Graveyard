@@ -15,49 +15,85 @@
 
 .form label{
   margin-left: 20px;
-	position: relative;
-	color: #fff;
-	background-color: #aaa;
+	color: #6fee2d;
+  text-shadow: 2px 1px 1px rgb(0, 0, 0) ;
+	background-color: #fff;
 	font-size: 26px;
 	text-align: center;
 	line-height: 150px;
-  padding: 100px 90px;
+  padding: 70px 90px;
 	cursor: pointer;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .form .plan input:checked + label{
-	background-color: #2fcc71;
+  border-top: 5px solid #27c5ec;
+  border-bottom: 5px solid #27c5ec;
 }
 
-.form .plan input:checked + label:after{
+/* .form .plan input:checked + label:after{
 	content: "\2713";
 	width: 20px;
 	height: 20px;
 	line-height: 20px;
 	border-radius: 100%;
-	background-color: #2fcc71;
+	background-color: #27c5ec;
 	z-index: 999;
 	position: absolute;
 	top: -10px;
-	right: -10px;
+	right: 70px;
   font-size: 14pt;
-}
+} */
 #f_grob_img{
-  background-image: url(../images/banner.jpg);
-  background-size: cover;
+  background-image: url(../images/paper_grob.jpg);
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 
 }
 #s_grob_img{
-  background-image: url(../images/banner.jpg);
-  background-size: cover;
+  background-image: url(../images/cheep_grob.jpg);
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 #t_grob_img {
-  background-image: url(../images/banner.jpg);
-  background-size: cover;
+  background-image: url(../images/medium_grob.png);
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+}
+#fr_grob_img {
+  background-image: url(../images/elite_grob.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#f_plate_img{
+  background-image: url(../images/f_plate.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+#s_plate_img{
+  background-image: url(../images/s_plate.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#t_plate_img {
+  background-image: url(../images/t_plate.jpg);
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#fr_plate_img {
+  background-image: url(../images/fr_plate.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }

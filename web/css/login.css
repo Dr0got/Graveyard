@@ -3,6 +3,7 @@
   width: 100%;
   text-align: right;
   background: rgb(36, 41, 42);
+  z-index: 999;
 }
 .fixed {
   position: fixed;
@@ -102,6 +103,8 @@ text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.79);
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.79);
 }
 #second-header {
+
+  z-index: 999;
 display: flex;
 background: #002535;
 padding-left: 10%;
