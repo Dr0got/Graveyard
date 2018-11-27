@@ -33,7 +33,6 @@
   border-top: 5px solid #27c5ec;
   border-bottom: 5px solid #27c5ec;
   background-size: 200%;
-  transition: 1s;
 }
 
 
@@ -74,7 +73,9 @@
   background-image: url(../images/kat3.jpg);
 }
 .hover_good {
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .hover_good:hover {
   background-size: 200%;
