@@ -5,64 +5,67 @@ function getAdministrators(){
 
     req.onload = function(){
         tableData =  JSON.parse(req.response);
-        let table = document.getElementById("mainTable");
-        table.style.borderCollapse = "collapse";
+        ShowAdmin();
+    }
+}
 
-        //set header
-        let tr = document.createElement("tr");
-        tr.style.backgroundColor = "green";
-        tr.style.color = "white";
+function ShowAdmin(){
+    let table = document.getElementById("mainTable");
 
-        let headers = ["Имя", "Фамилия", "Электронная почта", "Телефон", "Редактировать"];
-        for(let header of headers){
-            let td = document.createElement("td");
-            td.innerHTML = header;
-            tr.appendChild(td);
-        }
-        table.appendChild(tr);
+    //set header
+    let tr = document.createElement("tr");
+    tr.style.backgroundColor = "green";
+    tr.style.color = "white";
 
-        //set data;
-        for(let i = 0; i < tableData.allAdmins.length; ++i) {
-            let data = tableData.allAdmins[i];
-            let dataRow = document.createElement("tr");
-            dataRow.id = "row" + i;
+    let headers = ["Имя", "Фамилия", "Электронная почта", "Телефон", "Редактировать"];
+    for(let header of headers){
+        let td = document.createElement("td");
+        td.innerHTML = header;
+        tr.appendChild(td);
+    }
+    table.appendChild(tr);
 
-            let dataCheck = document.createElement("td");
-            dataCheck.id = "name" + i;
-            dataCheck.innerHTML = data.admin_name;
-            dataCheck.style.border = "2px black";
-            dataRow.appendChild(dataCheck);
+    //set data;
+    for(let i = 0; i < tableData.allAdmins.length; ++i) {
+        let data = tableData.allAdmins[i];
+        let dataRow = document.createElement("tr");
+        dataRow.id = "row" + i;
 
-            let dataCheck2 = document.createElement("td");
-            dataCheck2.id = "sname" + i;
-            dataCheck2.innerHTML = data.admin_sname;
-            dataCheck2.style.border = "2px black";
-            dataRow.appendChild(dataCheck2);
+        let dataCheck = document.createElement("td");
+        dataCheck.id = "name" + i;
+        dataCheck.innerHTML = data.admin_name;
+        dataCheck.style.border = "2px black";
+        dataRow.appendChild(dataCheck);
 
-            let dataCheck3 = document.createElement("td");
-            dataCheck3.id = "email" + i;
-            dataCheck3.innerHTML = data.admin_email;
-            dataCheck3.style.border = "2px black";
-            dataRow.appendChild(dataCheck3);
+        let dataCheck2 = document.createElement("td");
+        dataCheck2.id = "sname" + i;
+        dataCheck2.innerHTML = data.admin_sname;
+        dataCheck2.style.border = "2px black";
+        dataRow.appendChild(dataCheck2);
 
-            let dataCheck4 = document.createElement("td");
-            dataCheck4.id = "phone" + i;
-            dataCheck4.innerHTML = data.admin_phone;
-            dataCheck4.style.border = "2px black";
-            dataRow.appendChild(dataCheck4);
+        let dataCheck3 = document.createElement("td");
+        dataCheck3.id = "email" + i;
+        dataCheck3.innerHTML = data.admin_email;
+        dataCheck3.style.border = "2px black";
+        dataRow.appendChild(dataCheck3);
 
-            let button = document.createElement("td");
-            button.id = "button" + i;
-            button.innerHTML = "Редактировать";
-            button.onclick = function (event) {
-                EditAdmin(event.currentTarget.id.substring(event.currentTarget.id.length - 1));
-            };
-            let btnCheck = document.createElement("td");
-            btnCheck.appendChild(button);
-            dataRow.appendChild(btnCheck);
+        let dataCheck4 = document.createElement("td");
+        dataCheck4.id = "phone" + i;
+        dataCheck4.innerHTML = data.admin_phone;
+        dataCheck4.style.border = "2px black";
+        dataRow.appendChild(dataCheck4);
 
-            table.appendChild(dataRow);
-        }
+        let button = document.createElement("td");
+        button.id = "button" + i;
+        button.innerHTML = "Редактировать";
+        button.onclick = function (event) {
+            EditAdmin(event.currentTarget.id.substring(event.currentTarget.id.length - 1));
+        };
+        let btnCheck = document.createElement("td");
+        btnCheck.appendChild(button);
+        dataRow.appendChild(btnCheck);
+
+        table.appendChild(dataRow);
     }
 }
 
@@ -117,4 +120,28 @@ function showAddAdmin(){
         document.getElementById("addAdminForm").style.visibility = "visible";
     else
         document.getElementById("addAdminForm").style.visibility = "hidden";
+}
+
+function getGraves(){
+    let req = getGravesFromServer();
+    req.onload = function(){
+        tableData =  JSON.parse(req.response);
+        ShowGraves();
+    }
+}
+
+function ShowGraves(){
+    let table = document.getElementById("mainTable");
+    //set header
+    let tr = document.createElement("tr");
+    tr.style.backgroundColor = "green";
+    tr.style.color = "white";
+
+    let headers = ["Номер кладбища", "X", "Y", "Длина", "Ширина", "Покупатель", "ID покупателя, дата покупки"];
+    for(let header of headers){
+        let td = document.createElement("td");
+        td.innerHTML = header;
+        tr.appendChild(td);
+    }
+    table.appendChild(tr);
 }

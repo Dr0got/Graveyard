@@ -94,6 +94,14 @@ public class GraveServlet extends HttpServlet {
                 list.add(gr);
             }
             Graveyard graveyard = new Graveyard(list);
+
+            PreparedStatement prSt = connection.prepareStatement("SELECT x_entry, y_entry FROM graveyard.graveyards WHERE graveyard_number = ?");
+            prSt.setInt(1, Integer.parseInt(numOfYard));
+            ResultSet rset = prSt.executeQuery();
+            rset.next();
+            graveyard.x = rset.getInt(1);
+            graveyard.y = rset.getInt(2);
+
             String str = graveyard.getGraveJSON();
             response.getWriter().write(str);
         }catch(SQLException e){

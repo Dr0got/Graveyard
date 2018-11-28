@@ -1,4 +1,6 @@
 let numGraveyard;
+let map;
+let human;
 
 function getMap(nGraveyard){
     document.getElementById("map").removeChild(document.getElementById("mapImage"));
@@ -12,6 +14,7 @@ function getMap(nGraveyard){
     req.onload = function() {
         let str = req.response; // get the string from the response
         let obj = JSON.parse(str);
+        map = obj;
         for(let grave of obj.graves){
             let button = document.createElement("button");
             button.style.position = "absolute";
@@ -117,4 +120,20 @@ function placeBying(button){
         else alert("No");
     }
     else alert("Сначала авторизируйтесь");
+}
+
+function findHuman(){
+    let req = new XMLHttpRequest();
+    req.open('GET', 'MapServlet', true);
+    req.setRequestHeader('sname', document.getElementById("human").value);
+    req.setRequestHeader('deathDate', document.getElementById("deathDate").value);
+    req.responseType = 'text';
+
+    //When there is a response from the server
+    req.onload = function() {
+        let human = JSON.parse(req.response);
+        alert(human);
+    };
+
+    req.send();
 }

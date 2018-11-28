@@ -54,9 +54,6 @@ function setOldUser(){
                 let data = str.split(" ");
                 setCookie("user", data[0]);
                 setCookie("password", data[1]);
-                if((document.getElementById("isAdmin")).checked) {
-                    location.href = "../AdminInfo.html";
-                }
         }
         if(document.getElementById("out"))
             document.getElementById("enter-block").removeChild(document.getElementById("out"));
@@ -155,4 +152,14 @@ function InsertDeceased(name, sname, birthday, deathday){
     };
 
     req.send();
+}
+
+function getGravesFromServer(num){
+    let req = new XMLHttpRequest();
+    req.open('GET', 'GraveServlet', true);
+    req.setRequestHeader('numOfYard', num);
+    req.responseType = "text";
+
+    req.send();
+    return req;
 }

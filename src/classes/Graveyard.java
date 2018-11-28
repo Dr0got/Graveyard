@@ -12,6 +12,8 @@ import java.util.List;
 public class Graveyard {
     @JsonProperty("graves")
     public List<Grave> graves;
+    public int x;
+    public int y;
 
     public Graveyard(ArrayList<Grave> grvs){
         graves = grvs;
@@ -32,6 +34,8 @@ public class Graveyard {
     public String toString() {
         return "Graveyard{" +
                 "graves='" + graves +
+                "x='" + x +
+                "'y='" + y +
                 '}';
     }
 }

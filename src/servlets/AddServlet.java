@@ -81,7 +81,7 @@ public class AddServlet extends HttpServlet {
 
             prSt = connection.prepareStatement("INSERT into graveyard.deceased values (?, ?, ?, ?)");
             prSt.setInt(1, id);
-            prSt.setString(2, data[0] + data[1]);
+            prSt.setString(2, data[0] + " " + data[1]);
             prSt.setString(3, data[2]);
             prSt.setString(4, data[3]);
             prSt.execute();
