@@ -6,9 +6,9 @@
 
 /* FORM */
 
-.form .plan input{
+/* .form .plan input{
 	display: none;
-}
+} */
 .plan h2 {
   margin-bottom: 20px;
 }
@@ -50,16 +50,20 @@
 
 #f_plate_img{
   background-image: url(../images/f_plate.jpg);
-
+  padding: 50px;
 }
 #s_plate_img{
   background-image: url(../images/s_plate.jpg);
+
+  padding: 50px;
 }
 #t_plate_img {
   background-image: url(../images/t_plate.jpg);
+  padding: 50px;
 }
 #fr_plate_img {
   background-image: url(../images/fr_plate.jpg);
+  padding: 50px;
 }
 
 

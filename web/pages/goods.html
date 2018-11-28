@@ -31,28 +31,31 @@
 
     <section class="goods-main" style="padding-bottom:200px;">
       <section >
-        <form class="form" style="margin-top:30px;">
-			<section class="plan">
+        <!-- <form class="form" style="margin-top:30px;"> -->
+			<div id="grob" class="plan">
 				<h2>Выберите вид гроба:</h2>
 				<input type="radio" name="radio1" id="f_grob" value="f_grob"><label id="f_grob_img" class="free-label hover_good" for="f_grob">Дуб</label>
 				<input type="radio" name="radio1" id="s_grob" value="s_grob"><label id="s_grob_img" class="basic-label hover_good" for="s_grob">Сосна</label>
 				<input type="radio" name="radio1" id="t_grob" value="t_grob"><label id="t_grob_img" class="premium-label hover_good" for="t_grob">Цинк</label>
-        </section>
+          <button id="grobButton" type="button" name="button">Выбрать</button>
+      </div>
         <h4 style="margin-top:30px;">Размер</h4>
           Длина,см <input type="number" id="dlina" name="" value="170"><br>
 
             Ширина,см <input style="margin-top:7px;" type="number" id="shir" name="" value="70">
 
-        <section class="plan"  style="margin-top:80px;">
-          <h2>Выберите вид надгробия:</h2>
+        <div id="nadGrob" class="plan"  style="margin-top:80px;">
+          <h2 style="margin-bottom:50px;">Выберите вид надгробия:</h2>
 
 <input type="radio" name="plate" id="f_plate" value="f_plate"><label id="f_plate_img" class="free-label hover_good" for="f_plate"></label>
 <input type="radio" name="plate" id="s_plate" value="s_plate"><label id="s_plate_img" class="free-label hover_good" for="s_plate"></label>
 <input type="radio" name="plate" id="t_plate" value="t_plate"><label id="t_plate_img" class="basic-label hover_good" for="t_plate"></label>
 <input type="radio" name="plate" id="fr_plate" value="fr_plate"><label id="fr_plate_img" class="premium-label hover_good" for="fr_plate"></label>
 
-        </section>
-        <h4 style="margin-top:30px;">Метариал</h4>
+  <button id="plateButton" type="button" name="button">Выбрать</button>
+
+</div>
+        <h4 style="margin-top:50px;">Метариал</h4>
         <select class="" name="">
           <option value="">Черный мрамор</option>
           <option value="">Бетон</option>
@@ -60,31 +63,29 @@
           <option value="">Металл</option>
           <option value="">Белый мрамор</option>
         </select>
-      <!-- </form> -->
-
-      <!-- <form class="form" style="margin-top:80px;"> -->
-        <section class="plan"  style="margin-top:80px;">
-          <h2>Выберите катафалк:</h2>
+        <div id="katafalk" class="plan"  style="margin-top:80px;">
+          <h2 style="margin-bottom:80px;">Выберите катафалк:</h2>
 
 <input type="radio" name="kat" id="f_kat" value="f_kat"><label id="f_kat_img" class="free-label hover_good" for="f_kat"></label>
 <input type="radio" name="kat" id="s_kat" value="s_kat"><label id="s_kat_img" class="free-label hover_good" for="s_kat"></label>
 <input type="radio" name="kat" id="t_kat" value="t_kat"><label id="t_kat_img" class="basic-label hover_good" for="t_kat"></label>
-        </section>
-      <!-- </form> -->
 
-      <!-- <form class="form" style="margin-top:100px;"> -->
-        <section class="plan" style="margin-top:70px;">
+  <button id="katafalkButton" type="button" name="button">Выбрать</button>
+</div>
+        <div id="dopServices" class="plan" style="margin-top:70px;">
           <h2>Дополнительные услуги:</h2>
           <input style="display:inline;" type="checkbox" name="s" value="sa">Столик <br>
 
           <input style="display:inline;" type="checkbox" name="s" value="sa">Люди для переноски <br>
-          <input style="display:inline;" type="checkbox" name="s" value="sa">Церемония
-        </section>
+          <input style="display:inline;" type="checkbox" name="s" value="sa">Церемония <br>
+
+            <button id="dopkButton" type="button" name="button">Выбрать</button>
+        </div>
         <section class="plan" style="margin-top:70px;">
           <h3>Стоимость, грн:<h3 id="summ">12345</h3></h3>
           <input style="display:block;margin-top:10px;padding:5px" type="submit" name="" value="Подтвердить заказ">
         </section>
-      </form>
+      <!-- </form> -->
       </section>
 
     </section>
