@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/main-page.css">
     <link rel="stylesheet" href="../css/goods.css">
-    <link rel="stylesheet" href="../css/contacts.css">
   </head>
   <body>
     <div class="fixed">
@@ -21,23 +20,29 @@
     <header id="second-header">
       <ul>
         <a href="../Graveyard.html"><li>Главная</li></a>
-        <a href="./goods.html"><li>Товары и услуги</li></a>
+        <li>Товары и услуги</li>
         <a href="../Map.jsp"><li>Карта</li></a>
-        <li>Контакты</li>
-        <a href="pages/addPerson.html"><li>Добавить</li></a>
+        <a href="contacts.html"><li>Контакты</li></a>
+        <a href="addPerson.html"><li>Добавить</li></a>
       </ul>
     </header>
     </div>
     <section id="enter-block"></section>
 
-   <section class="contacts" style="padding-top:70px;padding-left:10%">
-     <h3>Наши контакты</h3><br>
-     <div class="nomer"><div class="oper" id="voda"></div><div><h4 id="f_nomer">+38(012)3456789</h4></div>
-     <div class="nomer"><div class="oper" id="life"></div><div><h4 id="s_nomer">+38(098)7654321</h4></div>
-     <br><h4 id="country">Украина</h4>
-     <h4 id="city">г. Харьков</h4>
-     <h4 id="street">ул. Гоголя 5</h4>
-   </section>
+    <section class="goods-main" style="padding-bottom:200px;">
+      <section >
+        <form class="form" style="margin-top:30px;">
+				<h2>Добавить умершего:</h2>
+        <input id="deadName" type="text" name="" value="Имя">
+
+        <input id="deadLastName" type="text" name="" value="Фамилия"><br>
+
+        Год рождения<input id="bornYear" type="number" name="" value=""><br>
+
+        Год смерти<input id="deathYear" type="number" name="" value=""><br>
+        <input type="submit" name="" value="Добавить">
+      </form>
+      </section>
 
     </section>
     <script src="../js/login.js" charset="utf-8"></script>
