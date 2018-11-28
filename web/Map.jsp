@@ -22,10 +22,10 @@
       </header>
       <header id="second-header">
         <ul>
-          <a href="../Graveyard.html"><li>Главная</li></a>
-          <a href="pages/goods.html"><li>Товары и услуги</li></a>
+          <a href="Graveyard.html"><li>Главная</li></a>
+          <a href="goods.html"><li>Товары и услуги</li></a>
           <a href="Map.jsp"><li>Карта</li></a>
-          <a href="pages/contacts.html"><li>Контакты</li></a>
+          <a href="contacts.html"><li>Контакты</li></a>
         </ul>
       </header>
       </div>
