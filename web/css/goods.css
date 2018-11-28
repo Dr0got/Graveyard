@@ -38,12 +38,15 @@
 
 #f_grob_img{
   background-image: url(../images/dub.jpg);
+  padding: 5px;
 }
 #s_grob_img{
   background-image: url(../images/sosna.jpg);
+  padding: 5px;
 }
 #t_grob_img {
   background-image: url(../images/zink.jpg);
+  padding: 5px;
 }
 
 
