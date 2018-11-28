@@ -54,8 +54,9 @@ function setOldUser(){
                 let data = str.split(" ");
                 setCookie("user", data[0]);
                 setCookie("password", data[1]);
-                if((document.getElementById("isAdmin")).checked)
-                    window.location.href = "AdminInfo.html";
+                if((document.getElementById("isAdmin")).checked) {
+                    location.href = "pages/AdminInfo.html";
+                }
         }
         if(document.getElementById("out"))
             document.getElementById("enter-block").removeChild(document.getElementById("out"));
