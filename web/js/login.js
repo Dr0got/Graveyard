@@ -9,9 +9,9 @@ let usersname = document.createElement('input'); // UserSname Фамилия
 let userpassport = document.createElement('input'); // Userpassport паспорт
 let userphone = document.createElement('input'); // UserPhone
 let usermail = document.createElement('input'); // E-mail
-// let check = document.createElement('div'); // Блок "Админ?"
-// let checkbox = document.createElement('input'); // Чекбокс "Админ?"
-// let label = document.createElement('label'); // Надпись "Я - администратор"
+let check = document.createElement('div'); // Блок "Админ?"
+let checkbox = document.createElement('input'); // Чекбокс "Админ?"
+let label = document.createElement('label'); // Надпись "Я - администратор"
 
 let subm = document.createElement('submit'); // Кнопка подтвердить
 let btn = document.createElement('button'); // Кнопка отмены
@@ -44,10 +44,10 @@ pass.setAttribute('maxlength', '20');
 pass.placeholder = 'Пароль';
 pass.setAttribute('required', '');
 
-// check.id = 'isAdmin-block';
-// checkbox.type = 'checkbox';
-// checkbox.id = 'isAdmin';
-// label.htmlFor = 'isAdmin';
+check.id = 'isAdmin-block';
+checkbox.type = 'checkbox';
+checkbox.id = 'isAdmin';
+label.htmlFor = 'isAdmin';
 
 username.id = 'username';
 username.setAttribute('maxlength', '20');
@@ -89,7 +89,7 @@ subm.id = 'enter-btn';
 btn.id = 'close-btn';
 btn.innerHTML="Отмена";
 
-// label.appendChild(document.createTextNode('Я - администратор'));
+label.appendChild(document.createTextNode('Я - администратор'));
 
 document.getElementById('enter').onclick=displayEnter;
 document.getElementById('registration').onclick=displayRegistration;
@@ -117,9 +117,9 @@ function displayEnter() {
   div2.style.display="none";
   form.appendChild(login);
   form.appendChild(pass);
-  // form.appendChild(check);
-  // check.appendChild(checkbox);
-  // check.appendChild(label);
+  form.appendChild(check);
+  check.appendChild(checkbox);
+  check.appendChild(label);
   form.appendChild(subm);
   form.appendChild(btn);
   div.appendChild(form);

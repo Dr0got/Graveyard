@@ -67,11 +67,12 @@
   margin-top: 10px;
 }
 #isAdmin-block {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
 #isAdmin {
+  display: none;
   float: left;
   margin: 0;
   margin-right: 2px;
