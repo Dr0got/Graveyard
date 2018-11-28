@@ -1,5 +1,4 @@
 let tableData;
-getAdministrators();
 
 function getAdministrators(){
     let req = getAdministratorsFromServer();
@@ -111,4 +110,11 @@ function EditAdmin(number){
     };
     form.appendChild(btn2);
     document.getElementsByTagName("body")[0].appendChild(form);
+}
+
+function showAddAdmin(){
+    if(document.getElementById("addAdminForm").style.visibility == "hidden")
+        document.getElementById("addAdminForm").style.visibility = "visible";
+    else
+        document.getElementById("addAdminForm").style.visibility = "hidden";
 }

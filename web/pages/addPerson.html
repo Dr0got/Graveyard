@@ -37,10 +37,10 @@
 
         <input id="deadLastName" type="text" name="" value="Фамилия"><br>
 
-        Год рождения<input id="bornYear" type="number" name="" value=""><br>
+        Дата рождения<input id="bornYear" type="date" name="" value=""><br>
 
-        Год смерти<input id="deathYear" type="number" name="" value=""><br>
-        <input type="submit" name="" value="Добавить">
+        Дата смерти<input id="deathYear" type="date" name="" value=""><br>
+        <input type="submit" name="" value="Добавить" onclick = "InsertDeceased(document.getElementById('deadName').value, document.getElementById('deadLastName').value, document.getElementById('bornYear').value, document.getElementById('deathYear').value)">
       </form>
       </section>
 
@@ -49,5 +49,14 @@
     <script src="../js/RequestScript.js" charset="utf-8"></script>
     <script src="../js/Cookie.js" charset="utf-8"></script>
     <script src="../js/Exception.js" charset="utf-8"></script>
+
+    <script>
+        window.onload = function(){
+            if(!getCookie("user")){
+                alert("Сначала авторизуйтесь или зарегистрируйтесь");
+                location.href = "../Graveyard.html";
+            }
+        }
+    </script>
   </body>
 </html>

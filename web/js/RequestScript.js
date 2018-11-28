@@ -116,3 +116,42 @@ function UpdateAdmins(name, sname, email, phone, oldphone){
 
     req.send();
 }
+
+function InsertAdmin(password, name, sname, phone, email){
+    let req = new XMLHttpRequest();
+    req.open("POST", "AddServlet", true);
+    req.setRequestHeader('table', "administrators");
+    req.setRequestHeader('password', password);
+    req.setRequestHeader('name', name);
+    req.setRequestHeader('sname', sname);
+    req.setRequestHeader('email', email);
+    req.setRequestHeader('phone', phone);
+    req.responseType = "text";
+
+    req.onload= function(){
+        if(req.response)
+            alert(req.response);
+        location.reload();
+    };
+
+    req.send();
+}
+
+function InsertDeceased(name, sname, birthday, deathday){
+    let req = new XMLHttpRequest();
+    req.open("POST", "AddServlet", true);
+    req.setRequestHeader('table', "deceased");
+    req.setRequestHeader('name', name);
+    req.setRequestHeader('sname', sname);
+    req.setRequestHeader('birthday', birthday);
+    req.setRequestHeader('deathday', deathday);
+    req.responseType = "text";
+
+    req.onload= function(){
+        if(req.response)
+            alert(req.response);
+        location.reload();
+    };
+
+    req.send();
+}

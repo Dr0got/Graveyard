@@ -71,7 +71,7 @@ public class AdminServlet extends HttpServlet {
             try {
                 response.getWriter().write("Exception");
             }catch(IOException e1){
-
+                throw new RuntimeException("Exception");
             }
         }
     }
