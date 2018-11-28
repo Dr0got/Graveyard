@@ -55,7 +55,7 @@ function setOldUser(){
                 setCookie("user", data[0]);
                 setCookie("password", data[1]);
                 if((document.getElementById("isAdmin")).checked) {
-                    location.href = "pages/AdminInfo.html";
+                    location.href = "../AdminInfo.html";
                 }
         }
         if(document.getElementById("out"))
