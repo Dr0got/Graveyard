@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/main-page.css">
     <link rel="stylesheet" href="css/goods.css">
+    <link rel="stylesheet" href="css/contacts.css">
   </head>
   <body>
     <div class="fixed">
@@ -23,19 +24,23 @@
         <a href="goods.html"><li>Товары и услуги</li></a>
         <a href="Map.jsp"><li>Карта</li></a>
         <li>Контакты</li>
+        <a href="addPerson.html"><li>Добавить</li></a>
         <a href="sendMail.html"><li>Написать админу</li></a>
       </ul>
     </header>
     </div>
     <section id="enter-block"></section>
 
-    <!-- Страницу писать тут
+   <div id="sendMail" class="contacts" style="padding-top:70px;padding-left:10%">
+     <select class="" name="">
+       <option value="firstAdmin">Admin 1</option>
+       <option value="secondAdmin">Admin 2</option>
+       <option value="thirdAdmin">Admin 2</option>
+     </select>
+     <input type="text" name="" value="">
+     <button id="emailSend" type="button" name="button">Отправить</button>
+   </div>
 
-
-          !!!!!!!!!!!!!!
-   -->
-
-    </section>
     <script src="js/login.js" charset="utf-8"></script>
     <script src="js/RequestScript.js" charset="utf-8"></script>
     <script src="js/Cookie.js" charset="utf-8"></script>
