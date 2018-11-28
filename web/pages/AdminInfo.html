@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AdminInfo</title>
+        <link rel="stylesheet" href="../css/AdminCSS.css">
+        <script src="../js/RequestScript.js"></script>
+        <script src = "../js/AdminInfo.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <button onclick = "location.reload()">
+                Администраторы
+            </button>
+            <button>
+                Могилы
+            </button>
+        </nav>
+
+        <div id = "MainField">
+            <table id = "mainTable">
+
+            </table>
+        </div>
+
+        <button id="AddAdminButton" style="position: absolute; left: 80%; top: 20%" onclick="showAddAdmin()">Добавить администратора</button>
+        <div id="addAdminForm" style="position: absolute; left: 80%; top: 25%; visibility: hidden">
+            <span>Пароль</span>
+            <input type="text" id="newAdminPassword"/>
+            <br />
+
+            <span>Имя</span>
+            <input type="text" id="newAdminName"/>
+            <br />
+
+            <span>Фамилия</span>
+            <input type="text" id="newAdminSname"/>
+            <br />
+
+            <span>Номер телефона</span>
+            <input type="text" id="newAdminPhone"/>
+            <br />
+
+            <span>Электронная почта</span>
+            <input type="text" id="newAdminEMail"/>
+            <br />
+
+            <button onclick = "InsertAdmin(document.getElementById('newAdminPassword').value, document.getElementById('newAdminName').value, document.getElementById('newAdminSname').value, document.getElementById('newAdminPhone').value, document.getElementById('newAdminEMail').value)">Подтвердить</button>
+        </div>
+        <script>
+            window.onload = getAdministrators();
+        </script>
+    </body>
+</html>

@@ -54,8 +54,9 @@ function setOldUser(){
                 let data = str.split(" ");
                 setCookie("user", data[0]);
                 setCookie("password", data[1]);
-                if((document.getElementById("isAdmin")).checked)
-                    window.location.href = "AdminInfo.html";
+                if((document.getElementById("isAdmin")).checked) {
+                    location.href = "pages/AdminInfo.html";
+                }
         }
         if(document.getElementById("out"))
             document.getElementById("enter-block").removeChild(document.getElementById("out"));
@@ -106,6 +107,45 @@ function UpdateAdmins(name, sname, email, phone, oldphone){
     req.setRequestHeader('email', email);
     req.setRequestHeader('phone', phone);
     req.setRequestHeader('oldphone', oldphone);
+    req.responseType = "text";
+
+    req.onload= function(){
+        if(req.response)
+            alert(req.response);
+        location.reload();
+    };
+
+    req.send();
+}
+
+function InsertAdmin(password, name, sname, phone, email){
+    let req = new XMLHttpRequest();
+    req.open("POST", "AddServlet", true);
+    req.setRequestHeader('table', "administrators");
+    req.setRequestHeader('password', password);
+    req.setRequestHeader('name', name);
+    req.setRequestHeader('sname', sname);
+    req.setRequestHeader('email', email);
+    req.setRequestHeader('phone', phone);
+    req.responseType = "text";
+
+    req.onload= function(){
+        if(req.response)
+            alert(req.response);
+        location.reload();
+    };
+
+    req.send();
+}
+
+function InsertDeceased(name, sname, birthday, deathday){
+    let req = new XMLHttpRequest();
+    req.open("POST", "AddServlet", true);
+    req.setRequestHeader('table', "deceased");
+    req.setRequestHeader('name', name);
+    req.setRequestHeader('sname', sname);
+    req.setRequestHeader('birthday', birthday);
+    req.setRequestHeader('deathday', deathday);
     req.responseType = "text";
 
     req.onload= function(){

@@ -31,17 +31,17 @@
 
     <section class="goods-main" style="padding-bottom:200px;">
       <section >
-        <form class="form" style="margin-top:30px;">
+        <div class="form" style="margin-top:30px;">
 				<h2>Добавить умершего:</h2>
         <input id="deadName" type="text" name="" value="Имя">
 
         <input id="deadLastName" type="text" name="" value="Фамилия"><br>
 
-        Год рождения<input id="bornYear" type="number" name="" value=""><br>
+        Дата рождения<input id="bornYear" type="date" name="" value=""><br>
 
-        Год смерти<input id="deathYear" type="number" name="" value=""><br>
-        <input type="submit" name="" value="Добавить">
-      </form>
+        Дата смерти<input id="deathYear" type="date" name="" value=""><br>
+            <button onclick = "InsertDeceased(document.getElementById('deadName').value, document.getElementById('deadLastName').value, document.getElementById('bornYear').value, document.getElementById('deathYear').value)">Добавить</button>
+        </div>
       </section>
 
     </section>
@@ -49,5 +49,14 @@
     <script src="../js/RequestScript.js" charset="utf-8"></script>
     <script src="../js/Cookie.js" charset="utf-8"></script>
     <script src="../js/Exception.js" charset="utf-8"></script>
+
+    <script>
+        window.onload = function(){
+            if(!getCookie("user")){
+                alert("Сначала авторизуйтесь или зарегистрируйтесь");
+                location.href = "../Graveyard.html";
+            }
+        }
+    </script>
   </body>
 </html>
