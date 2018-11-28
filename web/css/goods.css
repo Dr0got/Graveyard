@@ -65,12 +65,15 @@
 
 #f_kat_img{
   background-image: url(../images/kat2.jpg);
+    padding: 70px 140px;
 }
 #s_kat_img {
   background-image: url(../images/kat1.jpg);
+    padding: 70px 140px;
 }
 #t_kat_img {
   background-image: url(../images/kat3.jpg);
+  padding: 70px 140px;
 }
 .hover_good {
   background-repeat: no-repeat;

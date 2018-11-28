@@ -1,0 +1,19 @@
+.nomer {
+  display: inline;
+}
+.oper {
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-right: 5px;
+}
+#voda {
+  background-image: url(../images/voda.png);
+  background-position: center;
+  background-size: cover;
+}
+#life {
+  background-image: url(../images/life.png);
+  background-position: center;
+  background-size: cover;
+}
