@@ -106,10 +106,13 @@ body {
   float: left;
 }
 #service-image {
-  background: black;
   width: 40%;
   height: 300px;
   float: right;
+  background-image: url(../images/org.jpg);
+  background-position: -300px 0px;
+  background-repeat: no-repeat;
+  background-size: 240%;
 }
 .second-block {
   padding-top: 40px;
