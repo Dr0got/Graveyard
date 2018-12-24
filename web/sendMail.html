@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="css/contacts.css">
   </head>
   <body>
+    <style media="screen">
+      #subject {
+        height: 200px;
+        width: 300px;
+        resize: none;
+      }
+    </style>
     <div class="fixed">
 
 
@@ -31,13 +38,14 @@
     </div>
     <section id="enter-block"></section>
 
-   <div id="sendMail" class="contacts" style="padding-top:70px;padding-left:10%">
+   <div id="sendMail" class="contacts" style="padding-top:70px;padding-left:10%;display:block;width:500px">
      <select class="" name="">
        <option value="firstAdmin">Admin 1</option>
        <option value="secondAdmin">Admin 2</option>
        <option value="thirdAdmin">Admin 2</option>
      </select>
-     <input type="text" name="" value="">
+     <textarea id="subject" name="subject" maxlength="200" placeholder="Письмо администратору..."></textarea>
+     <!-- <input id="send" type="text" size="50" maxlength="200" name="" value=""> -->
      <button id="emailSend" type="button" name="button">Отправить</button>
    </div>
 
