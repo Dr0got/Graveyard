@@ -54,6 +54,7 @@ function setOldUser(){
                 let data = str.split(" ");
                 setCookie("user", data[0]);
                 setCookie("password", data[1]);
+                throwException("Здравствуйте, " + data[0]);
         }
         if(document.getElementById("out"))
             document.getElementById("enter-block").removeChild(document.getElementById("out"));

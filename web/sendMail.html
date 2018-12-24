@@ -39,19 +39,43 @@
     <section id="enter-block"></section>
 
    <div id="sendMail" class="contacts" style="padding-top:70px;padding-left:10%;display:block;width:500px">
-     <select class="" name="">
+     <select class="" name="" id = "to">
+       <option value="somebody">Любому администратору</option>
        <option value="firstAdmin">Admin 1</option>
        <option value="secondAdmin">Admin 2</option>
-       <option value="thirdAdmin">Admin 2</option>
+       <option value="thirdAdmin">Admin 3</option>
      </select>
      <textarea id="subject" name="subject" maxlength="200" placeholder="Письмо администратору..."></textarea>
      <!-- <input id="send" type="text" size="50" maxlength="200" name="" value=""> -->
-     <button id="emailSend" type="button" name="button">Отправить</button>
+     <button id="emailSend" type="button" name="button" onclick = "sendMessage()";>Отправить</button>
    </div>
 
     <script src="js/login.js" charset="utf-8"></script>
     <script src="js/RequestScript.js" charset="utf-8"></script>
     <script src="js/Cookie.js" charset="utf-8"></script>
     <script src="js/Exception.js" charset="utf-8"></script>
+    <script>
+      function  sendMessage() {
+          if(!getCookie("user")) {
+              throwException("Сначала авторизируйтесь");
+              return;
+          }
+          let req = new XMLHttpRequest();
+          req.open('POST', 'MessageServlet', true);
+          req.setRequestHeader('user', getCookie("user"));
+          let objSel = document.getElementById("to");
+          req.setRequestHeader('admin', objSel.options[objSel.selectedIndex].value);
+          req.setRequestHeader('text', document.getElementById("subject").innerText);
+          req.responseType = "text";
+
+          req.onload = function(){
+              if(req.response == "OK")
+                 throwException("Сообщение доставлено успешно");
+              else throwException("Ошибка");
+          };
+
+          req.send(null);
+      }
+    </script>
   </body>
 </html>
