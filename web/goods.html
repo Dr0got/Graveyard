@@ -28,60 +28,59 @@
       </ul>
     </header>
     </div>
-    <section id="enter-block"></section>
+    <!--<section id="enter-block"></section> -->
 
     <section class="goods-main" style="padding-bottom:200px;">
-      <section >
-        <!-- <form class="form" style="margin-top:30px;"> -->
-			<div id="grob" class="plan">
-				<h2>Выберите вид гроба:</h2>
-				<input type="radio" name="radio1" id="f_grob" value="f_grob"><label id="f_grob_img" class="free-label hover_good" for="f_grob">Дуб</label>
-				<input type="radio" name="radio1" id="s_grob" value="s_grob"><label id="s_grob_img" class="basic-label hover_good" for="s_grob">Сосна</label>
-				<input type="radio" name="radio1" id="t_grob" value="t_grob"><label id="t_grob_img" class="premium-label hover_good" for="t_grob">Цинк</label>
-          <button id="grobButton" type="button" name="button">Выбрать</button>
-      </div>
-        <h4 style="margin-top:30px;">Размер</h4>
+        <div style = "position: absolute; top: 10%; left: 35%;">
+            <button id = "setCoffin" onclick = "hideAll();  document.getElementById('grob').style.visibility = 'visible'">Гробы</button>
+            <button id = "setMonument" onclick = "hideAll(); document.getElementById('nadGrob').style.visibility = 'visible'">Памятники</button>
+            <button id = "setKatafalk" onclick = "hideAll(); document.getElementById('katafalk').style.visibility = 'visible'">Катафалки</button>
+            <button id = "setDop" onclick = "hideAll(); document.getElementById('dopServices').style.visibility = 'visible'">Дополнительные услуги</button>
+        </div>
+      <section class = "mainfield" style = "position: absolute; left: 20%; top: 20%;">
+        <div id="grob" class="plan" style = "position: absolute; left: 20%; top: 20%;">
+            <h2>Выберите вид гроба:</h2>
+            <input type="radio" name="radio1" id="f_grob" value="f_grob"><label id="f_grob_img" class="free-label hover_good" for="f_grob">Дуб</label>
+            <input type="radio" name="radio1" id="s_grob" value="s_grob"><label id="s_grob_img" class="basic-label hover_good" for="s_grob">Сосна</label>
+            <input type="radio" name="radio1" id="t_grob" value="t_grob"><label id="t_grob_img" class="premium-label hover_good" for="t_grob">Цинк</label>
+            <h4 style="margin-top:30px;">Размер</h4>
           Длина,см <input type="number" id="dlina" name="" value="170"><br>
-          Ширина (в плечах),см <input style="margin-top:7px;" type="number" id="shir" name="" value="70">
+          Ширина (в плечах),см <input style="margin-top:7px; visibility: hidden" type="number" id="shir" name="" value="70">
+        </div>
 
-        <div id="nadGrob" class="plan"  style="margin-top:80px;">
-          <h2 style="margin-bottom:50px;">Выберите вид надгробия:</h2>
+        <div id="nadGrob" class="plan"  style="margin-top:80px; visibility: hidden; position: absolute; left: 20%; top: 20%;" >
+              <h2 style="margin-bottom:50px;">Выберите вид надгробия:</h2>
 
-<input type="radio" name="plate" id="f_plate" value="f_plate"><label id="f_plate_img" class="free-label hover_good" for="f_plate"></label>
-<input type="radio" name="plate" id="s_plate" value="s_plate"><label id="s_plate_img" class="free-label hover_good" for="s_plate"></label>
-<input type="radio" name="plate" id="t_plate" value="t_plate"><label id="t_plate_img" class="basic-label hover_good" for="t_plate"></label>
-<input type="radio" name="plate" id="fr_plate" value="fr_plate"><label id="fr_plate_img" class="premium-label hover_good" for="fr_plate"></label>
-
-  <button id="plateButton" type="button" name="button">Выбрать</button>
-
-</div>
-        <h4 style="margin-top:50px;">Метариал</h4>
-        <select class="" name="">
-          <option value="bmarb">Черный мрамор</option>
-          <option value="concrete">Бетон</option>
-          <option value="granit">Гранит</option>
-          <option value="metall">Металл</option>
-          <option value="whitemarb">Белый мрамор</option>
-        </select>
-        <div id="katafalk" class="plan"  style="margin-top:80px;">
+                <input type="radio" name="plate" id="f_plate" value="f_plate"><label id="f_plate_img" class="free-label hover_good" for="f_plate"></label>
+                <input type="radio" name="plate" id="s_plate" value="s_plate"><label id="s_plate_img" class="free-label hover_good" for="s_plate"></label>
+                <input type="radio" name="plate" id="t_plate" value="t_plate"><label id="t_plate_img" class="basic-label hover_good" for="t_plate"></label>
+                <input type="radio" name="plate" id="fr_plate" value="fr_plate"><label id="fr_plate_img" class="premium-label hover_good" for="fr_plate"></label>
+            <h4 style="margin-top:50px;">Метариал</h4>
+            <select class="" name="">
+              <option value="bmarb">Черный мрамор</option>
+              <option value="concrete">Бетон</option>
+              <option value="granit">Гранит</option>
+              <option value="metall">Металл</option>
+              <option value="whitemarb">Белый мрамор</option>
+            </select>
+        </div>
+        <div id="katafalk" class="plan"  style="margin-top:80px; visibility: hidden; position: absolute; left: 20%; top: 20%;">
           <h2 style="margin-bottom:80px;">Выберите катафалк:</h2>
 
 <input type="radio" name="kat" id="f_kat" value="f_kat"><label id="f_kat_img" class="free-label hover_good" for="f_kat"></label>
 <input type="radio" name="kat" id="s_kat" value="s_kat"><label id="s_kat_img" class="free-label hover_good" for="s_kat"></label>
 <input type="radio" name="kat" id="t_kat" value="t_kat"><label id="t_kat_img" class="basic-label hover_good" for="t_kat"></label>
 
-  <button id="katafalkButton" type="button" name="button">Выбрать</button>
 </div>
-        <div id="dopServices" class="plan" style="margin-top:70px;">
+        <div id="dopServices" class="plan" style="margin-top:70px; visibility: hidden; ">
           <h2>Дополнительные услуги:</h2>
           <input style="display:inline;" type="checkbox" name="s" value="sa">Столик <br>
 
           <input style="display:inline;" type="checkbox" name="s" value="sa">Люди для переноски <br>
           <input style="display:inline;" type="checkbox" name="s" value="sa">Церемония <br>
 
-            <button id="dopkButton" type="button" name="button">Выбрать</button>
         </div>
-        <div class="plan" style="margin-top:70px;">
+        <div class="plan" style="margin-top:70px; position: absolute; left: 25%; top: 70%;">
           <h3>Стоимость, грн:<h3 id="summ">12345</h3></h3>
           <!-- <input style="display:block;margin-top:10px;padding:5px" type="submit" name="" value="Подтвердить заказ"> -->
         </div>
@@ -93,5 +92,6 @@
     <script src="js/RequestScript.js" charset="utf-8"></script>
     <script src="js/Cookie.js" charset="utf-8"></script>
     <script src="js/Exception.js" charset="utf-8"></script>
+    <script src = "js/Goods.js" charset="utf-8"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@ public class Coordinates {
 
     public int numYard;
 
-    public Coordinates(int x, int y, int num){
+    public Coordinates( int num, int x, int y){
         x_grave = x;
         y_grave = y;
         numYard = num;

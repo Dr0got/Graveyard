@@ -30,7 +30,7 @@
       </header>
       </div>
       <section id="enter-block"></section>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" height="650" width="1000"></canvas>
         <div id = "map" style="opacity: 1">
             <img src = "images/map.png" usemap="#Navigation" style="height: 1094px; width: 887px;" id="mapImage">
             <map id="Navigation"  name="Navigation">

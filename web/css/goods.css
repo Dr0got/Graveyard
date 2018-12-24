@@ -90,3 +90,13 @@
 .hover_good:hover {
   background-size: 200%;
 }
+
+.mainfield{
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 60%;
+    height: 70%;
+    background-color: beige;
+    border: 4px darkslategray solid;
+}

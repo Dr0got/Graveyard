@@ -3,7 +3,8 @@ let map;
 let human;
 
 function getMap(nGraveyard){
-    document.getElementById("map").removeChild(document.getElementById("mapImage"));
+    if(document.getElementById("mapImage"))
+     document.getElementById("map").removeChild(document.getElementById("mapImage"));
     numGraveyard = nGraveyard;
     let req = new XMLHttpRequest();
     req.open('GET', 'GraveServlet', true);
@@ -132,8 +133,67 @@ function findHuman(){
     //When there is a response from the server
     req.onload = function() {
         let human = JSON.parse(req.response);
-        alert(human);
+        getMap(human.numYard);
+
+        setTimeout(showWay, 500, human);
     };
 
     req.send();
+}
+
+function showWay(human){
+    let ctx = document.getElementById("canvas").getContext("2d");
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, 1000, 650);
+
+    ctx.strokeStyle = "red";
+    ctx.strokeWidth = "1px";
+    let point = {x: map.x, y: map.y};
+    ctx.beginPath();
+    ctx.moveTo(point.x*20-10, point.y*20+10);
+    //ctx.lineTo(human.x_grave*20, human.y_grave*20);
+    while(point.x != human.x_grave && point.y != human.y_grave) {
+        while (point.x > human.x_grave) {
+          //  if(isProblem(point.x-1, point.y)){
+           //     point.y += 1;
+           //     break;
+           // }
+            point.x -= 1;
+            ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
+        }
+        while (point.x < human.x_grave) {
+           // if(isProblem(point.x+1, point.y)){
+            //    point.y += 1;
+             //   break;
+           // }
+            point.x += 1;
+            ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
+        }
+        while (point.y > human.y_grave) {
+            //if(isProblem(point.x, point.y-1)){
+             //   point.x += 1;
+              //  break;
+          //  }
+            point.y -= 1;
+            ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
+        }
+        while (point.y < human.y_grave) {
+           // if(isProblem(point.x, point.y+1)){
+            //    point.x += 1;
+            //    break;
+           // }
+            point.y += 1;
+            ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
+        }
+    }
+    ctx.lineTo(point.x*20, point.y*20+10);
+    ctx.stroke();
+}
+
+function isProblem(x, y){
+    for(let grave of map.graves){
+        if(grave.x_grave == x && grave.y_grave == y)
+            return true;
+    }
+    return false;
 }
