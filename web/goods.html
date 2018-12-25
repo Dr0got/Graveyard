@@ -40,12 +40,13 @@
       <section class = "mainfield" style = "position: absolute; left: 20%; top: 20%;">
         <div id="grob" class="plan" style = "position: absolute; left: 20%; top: 20%;">
             <h2>Выберите вид гроба:</h2>
-            <input type="radio" name="radio1" id="f_grob" value="f_grob"><label id="f_grob_img" class="free-label hover_good" for="f_grob">Дуб</label>
-            <input type="radio" name="radio1" id="s_grob" value="s_grob"><label id="s_grob_img" class="basic-label hover_good" for="s_grob">Сосна</label>
-            <input type="radio" name="radio1" id="t_grob" value="t_grob"><label id="t_grob_img" class="premium-label hover_good" for="t_grob">Цинк</label>
+            <input type="radio" name="radio1" id="f_grob" value="oak" price="2500"><label id="f_grob_img" class="free-label hover_good" for="f_grob">Дуб</label>
+            <input type="radio" name="radio1" id="s_grob" value="pine" price="2000"><label id="s_grob_img" class="basic-label hover_good" for="s_grob">Сосна</label>
+            <input type="radio" name="radio1" id="t_grob" value="zinc" price="4500"><label id="t_grob_img" class="premium-label hover_good" for="t_grob">Цинк</label>
             <h4 style="margin-top:30px;">Размер</h4>
-          Длина,см <input type="number" id="dlina" name="" value="170"><br>
-          Ширина (в плечах),см <input style="margin-top:7px; visibility: hidden" type="number" id="shir" name="" value="70">
+          Длина,м <input type="number" id="length" name="" value="2.0"><br>
+          Ширина (в плечах),м <input style="margin-top:7px" type="number" id="shir" name="" value="0.6" />
+            <button id = "buyGrob" onclick = buyCoffin()>Купить</button>
         </div>
 
         <div id="nadGrob" class="plan"  style="margin-top:80px; visibility: hidden; position: absolute; left: 20%; top: 20%;" >
@@ -55,33 +56,35 @@
                 <input type="radio" name="plate" id="s_plate" value="s_plate"><label id="s_plate_img" class="free-label hover_good" for="s_plate"></label>
                 <input type="radio" name="plate" id="t_plate" value="t_plate"><label id="t_plate_img" class="basic-label hover_good" for="t_plate"></label>
                 <input type="radio" name="plate" id="fr_plate" value="fr_plate"><label id="fr_plate_img" class="premium-label hover_good" for="fr_plate"></label>
-            <h4 style="margin-top:50px;">Метариал</h4>
-            <select class="" name="">
-              <option value="bmarb">Черный мрамор</option>
-              <option value="concrete">Бетон</option>
-              <option value="granit">Гранит</option>
-              <option value="metall">Металл</option>
-              <option value="whitemarb">Белый мрамор</option>
+            <h4 style="margin-top:50px;">Материал</h4>
+            <select class="" name="" id = "forms">
+              <option value="black_marble" id ="blmb" price="3000">Черный мрамор</option>
+              <option value="concrete" id = "conc" price="1000">Бетон</option>
+              <option value="granite" id = "gran" rice="4770">Гранит</option>
+              <option value="metal" id = "met" price="1000">Металл</option>
+              <option value="white_marble" id = "wtmb" price="25000">Белый мрамор</option>
             </select>
+            <br />
+            Высота, м <input style="margin-top:7px" type="number" id="height" name="" value="0.6" />
+            <button id = "buyNadGrob" onclick="buyMonument()">Купить</button>
         </div>
         <div id="katafalk" class="plan"  style="margin-top:80px; visibility: hidden; position: absolute; left: 20%; top: 20%;">
-          <h2 style="margin-bottom:80px;">Выберите катафалк:</h2>
+            <h2 style="margin-bottom:80px;">Выберите катафалк:</h2>
 
-<input type="radio" name="kat" id="f_kat" value="f_kat"><label id="f_kat_img" class="free-label hover_good" for="f_kat"></label>
-<input type="radio" name="kat" id="s_kat" value="s_kat"><label id="s_kat_img" class="free-label hover_good" for="s_kat"></label>
-<input type="radio" name="kat" id="t_kat" value="t_kat"><label id="t_kat_img" class="basic-label hover_good" for="t_kat"></label>
-
-</div>
+            <input type="radio" name="kat" id="f_kat" value="f_kat" price="3000"><label id="f_kat_img" class="free-label hover_good" for="f_kat"></label>
+            <input type="radio" name="kat" id="s_kat" value="s_kat" price="1500"><label id="s_kat_img" class="free-label hover_good" for="s_kat"></label>
+            <input type="radio" name="kat" id="t_kat" value="t_kat" price="500"><label id="t_kat_img" class="basic-label hover_good" for="t_kat"></label>
+            <button id = "buyKatafalk" onclick="buyKatafalk()">Купить</button>
+        </div>
         <div id="dopServices" class="plan" style="margin-top:70px; visibility: hidden; ">
           <h2>Дополнительные услуги:</h2>
-          <input style="display:inline;" type="checkbox" name="s" value="sa">Столик <br>
-
-          <input style="display:inline;" type="checkbox" name="s" value="sa">Люди для переноски <br>
-          <input style="display:inline;" type="checkbox" name="s" value="sa">Церемония <br>
-
+          <input style="display:inline;" type="radio" name="s" value="sa" id="table" price="600">Столик <br>
+          <input style="display:inline;" type="radio" name="s" value="sa" id="group" price="400">Люди для переноски <br>
+          <input style="display:inline;" type="radio" name="s" value="sa" id="ceremony" price="500">Церемония <br>
+            <button id = "buyDop" onclick="buyDop()">Купить</button>
         </div>
         <div class="plan" style="margin-top:70px; position: absolute; left: 25%; top: 70%;">
-          <h3>Стоимость, грн:<h3 id="summ">12345</h3></h3>
+          <h3>Стоимость, грн:<h3 id="sum">0 грн</h3></h3>
           <!-- <input style="display:block;margin-top:10px;padding:5px" type="submit" name="" value="Подтвердить заказ"> -->
         </div>
       <!-- </form> -->
@@ -93,5 +96,8 @@
     <script src="js/Cookie.js" charset="utf-8"></script>
     <script src="js/Exception.js" charset="utf-8"></script>
     <script src = "js/Goods.js" charset="utf-8"></script>
+  <script>
+      window.onload = setPrice();
+  </script>
   </body>
 </html>
