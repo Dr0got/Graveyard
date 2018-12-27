@@ -30,7 +30,7 @@ public class MessageServlet extends HttpServlet {
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             Connection connection = DriverManager.getConnection(connectionURL, userName, this.password);
-            PreparedStatement prSt = connection.prepareStatement("INSERT into graveyard.messages values ((SELECT MAX(id_message) FROM messages m1), ?, ?, ?, ?)");
+            PreparedStatement prSt = connection.prepareStatement("INSERT into graveyard.messages values ((SELECT MAX(id_message)+2 FROM messages m1), ?, ?, ?, ?)");
             prSt.setString(1, admin);
             prSt.setString(2, author);
             prSt.setString(3, text);

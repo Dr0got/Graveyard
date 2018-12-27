@@ -65,7 +65,7 @@
           req.setRequestHeader('user', getCookie("user"));
           let objSel = document.getElementById("to");
           req.setRequestHeader('admin', objSel.options[objSel.selectedIndex].value);
-          req.setRequestHeader('text', document.getElementById("subject").innerText);
+          req.setRequestHeader('text', document.getElementById("subject").value);
           req.responseType = "text";
 
           req.onload = function(){
@@ -73,7 +73,7 @@
                  throwException("Сообщение доставлено успешно");
               else throwException("Ошибка");
           };
-
+          //alert(document.getElementById("subject").value);
           req.send(null);
       }
     </script>

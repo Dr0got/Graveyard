@@ -154,34 +154,18 @@ function showWay(human){
     //ctx.lineTo(human.x_grave*20, human.y_grave*20);
     while(point.x != human.x_grave && point.y != human.y_grave) {
         while (point.x > human.x_grave) {
-          //  if(isProblem(point.x-1, point.y)){
-           //     point.y += 1;
-           //     break;
-           // }
             point.x -= 1;
             ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
         }
         while (point.x < human.x_grave) {
-           // if(isProblem(point.x+1, point.y)){
-            //    point.y += 1;
-             //   break;
-           // }
             point.x += 1;
             ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
         }
         while (point.y > human.y_grave) {
-            //if(isProblem(point.x, point.y-1)){
-             //   point.x += 1;
-              //  break;
-          //  }
             point.y -= 1;
             ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
         }
         while (point.y < human.y_grave) {
-           // if(isProblem(point.x, point.y+1)){
-            //    point.x += 1;
-            //    break;
-           // }
             point.y += 1;
             ctx.lineTo(point.x * 20 - 10, point.y * 20 + 10);
         }

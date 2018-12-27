@@ -1791,20 +1791,30 @@ choice_datetime</ColNames>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="412" parent="295" name="monuments_monument_materials_monument_material_fk">
+    <index id="412" parent="295" name="monuments_clients_id_client_fk">
+      <ColNames>id_client</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="413" parent="295" name="monuments_monument_materials_monument_material_fk">
       <ColNames>monument_material</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="413" parent="295" name="monuments_monument_forms_monument_form_fk">
+    <index id="414" parent="295" name="monuments_monument_forms_monument_form_fk">
       <ColNames>monument_form</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="414" parent="295" name="PRIMARY">
+    <key id="415" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_monument</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="415" parent="295" name="monuments_monument_materials_monument_material_fk">
+    <foreign-key id="416" parent="295" name="monuments_clients_id_client_fk">
+      <ColNames>id_client</ColNames>
+      <RefSchemaName>graveyard</RefSchemaName>
+      <RefTableName>clients</RefTableName>
+      <RefColNames>id_client</RefColNames>
+    </foreign-key>
+    <foreign-key id="417" parent="295" name="monuments_monument_materials_monument_material_fk">
       <ColNames>monument_material</ColNames>
       <RefSchemaName>graveyard</RefSchemaName>
       <RefTableName>monument_materials</RefTableName>
@@ -1812,7 +1822,7 @@ choice_datetime</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="416" parent="295" name="monuments_monument_forms_monument_form_fk">
+    <foreign-key id="418" parent="295" name="monuments_monument_forms_monument_form_fk">
       <ColNames>monument_form</ColNames>
       <RefSchemaName>graveyard</RefSchemaName>
       <RefTableName>monument_forms</RefTableName>
